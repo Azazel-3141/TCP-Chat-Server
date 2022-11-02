@@ -106,4 +106,7 @@ class Client():
         await asyncio.gather(recieve_message, send_message)
 
 client = Client()
-asyncio.run(client.run_client())
+try:
+    asyncio.run(client.run_client())
+except Exception as e:
+    print('Server has been disconnected!')
